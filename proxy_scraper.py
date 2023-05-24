@@ -41,7 +41,7 @@ class Scraper:
             except ValueError :
                 continue
 
-    def write_to_json(self, file_name: str):
+    def write_to_json(self, file_name: str) -> None:
         with open(file_name, 'w', encoding='utf-8') as file:
             json.dump(self.proxy_list, file, indent=4, ensure_ascii=False)
         print(f'{file_name} is created...')
